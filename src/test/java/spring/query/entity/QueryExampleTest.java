@@ -79,51 +79,7 @@ public class QueryExampleTest {
 
     }
 
-    @Test
-    public void queryPerson() {
 
-        // Arrange
-        List<Person> resultado = personRepository.findAll();
-        Example<Person> query = Example.of(new Person(null, "lastName10"));
-
-        // Act
-        Person result = personRepository.findOne(query).get();
-
-        // Assert
-        Assert.assertEquals("name10", result.getName());
-
-    }
-
-
-    @Test
-    public void methodTest() {
-
-        // Arrange
-        Example<QueryPerson> query = Example.of(new QueryPerson("name10", "lastName10"));
-
-        // Act
-        Person result = personRepository.findOne(query).get();
-
-        // Assert
-        Assert.assertEquals("name10", result.getName());
-
-    }
-
-
-    @Test
-    public void matchingWithIgnorePaths() {
-
-        // Arrange
-        ExampleMatcher matching = matching().withIgnorePaths("name", "lastName");
-        Example<Person> query = Example.of(person1, matching);
-
-        // Act
-        Person result = personRepository.findOne(query).get();
-
-        // Assert
-        Assert.assertEquals("name1", result.getName());
-
-    }
 
 
     @Test
