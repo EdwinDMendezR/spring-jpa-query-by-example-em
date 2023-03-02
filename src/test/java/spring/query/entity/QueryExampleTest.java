@@ -28,7 +28,7 @@ import static org.springframework.data.domain.ExampleMatcher.matching;
 public class QueryExampleTest {
 
     @Autowired
-    private PersonRepository personRepository;
+    PersonRepository personRepository;
 
     Person person1;
     Person person2;
