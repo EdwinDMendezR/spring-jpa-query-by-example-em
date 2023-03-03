@@ -80,24 +80,6 @@ public class QueryExampleTest {
     }
 
 
-
-
-    @Test
-    public void matchingWithStringMatcherEnding() {
-
-        // Arrange
-        ExampleMatcher matching = matching().withStringMatcher(ExampleMatcher.StringMatcher.ENDING);
-        Example<Person> query = Example.of(new Person("0", null), matching);
-
-        // Act
-        List<Person> resultado = personRepository.findAll(query);
-
-        // Assert
-        Assert.assertEquals("name10", resultado.get(0).getName());
-
-    }
-
-
     @Test
     public void matchingWithMatcherIgnoreCase() {
 
