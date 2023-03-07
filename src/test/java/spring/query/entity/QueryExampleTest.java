@@ -1,7 +1,6 @@
 package spring.query.entity;
 
 
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -17,8 +16,6 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Optional;
 
-import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.ignoreCase;
-import static org.springframework.data.domain.ExampleMatcher.GenericPropertyMatchers.startsWith;
 import static org.springframework.data.domain.ExampleMatcher.matching;
 
 @RunWith(SpringRunner.class)
