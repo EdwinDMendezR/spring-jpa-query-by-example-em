@@ -79,52 +79,6 @@ public class QueryExampleTest {
 
     }
 
-
-    @Test
-    public void matchingWithMatcherIgnoreCase() {
-
-        // Arrange
-        ExampleMatcher matching = matching()
-                //.withIgnorePaths("age")
-                .withMatcher("name", startsWith())
-                .withMatcher("lastName", ignoreCase());
-
-        Example<Person> query = Example.of(
-                new Person("name1", "LASTNAME1"),
-                matching
-        );
-
-
-        // Act
-        List<Person> resultado = personRepository.findAll(query);
-
-        // Assert
-
-    }
-
-
-    @Test
-    public void matchingWithMatcherExampleMatcher() {
-
-        // Arrange
-        ExampleMatcher matching = matching()
-                //.withIgnorePaths("age")
-                .withMatcher("name", ExampleMatcher.GenericPropertyMatcher::startsWith)
-                .withMatcher("lastName", ExampleMatcher.GenericPropertyMatcher::ignoreCase);
-
-        Example<Person> query = Example.of(
-                new Person("name1", "LASTNAME1"),
-                matching
-        );
-
-        // Act
-        List<Person> resultado = personRepository.findAll(query);
-
-        // Assert
-
-    }
-
-
     @Test
     public void methodTestd() {
 
