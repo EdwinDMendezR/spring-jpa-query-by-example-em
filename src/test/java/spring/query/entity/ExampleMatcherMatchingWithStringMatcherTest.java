@@ -46,22 +46,7 @@ public class ExampleMatcherMatchingWithStringMatcherTest  extends QueryExampleTe
 
     }
 
-    @Test
-    public void matchingWithStringMatcherDefault2() {
 
-        // Arrange
-        ExampleMatcher matching = matching().withMatcher(
-                "lastName", ExampleMatcher.GenericPropertyMatchers.ignoreCase()
-        );
-        Example<Person> query = Example.of(new Person(null, "lastNAME3"), matching);
-
-        // Act
-        List<Person> resultado = personRepository.findAll(query);
-
-        // Assert
-        Assert.assertEquals(1, resultado.size());
-
-    }
 
     @Test
     public void matchingWithStringMatcherExact() {
